@@ -7,19 +7,19 @@ from email.mime.multipart import MIMEMultipart
 COMMASPACE = ', '
 
 def main():
-    sender = 'griego.eric@gmail.com'
-    gmail_password = '1maddox!'
-    recipients = ['aumbhau@ondeck.com']
+    sender = 'email@email.com'
+    gmail_password = 'PW'
+    recipients = ['test@email.com']
     
     # Create the enclosing (outer) message
     outer = MIMEMultipart()
-    outer['Subject'] = 'PM Test Script for Reporting'
+    outer['Subject'] = 'Test'
     outer['To'] = COMMASPACE.join(recipients)
     outer['From'] = sender
     outer.preamble = 'You will not see this in a MIME-aware mail reader.\n'
 
     # List of attachments
-    attachments = ['/users/egriego/desktop/OnDeck_Raw_UsageCount.xlsx']
+    attachments = ['file']
 
     # Add the attachments to the message
     for file in attachments:
